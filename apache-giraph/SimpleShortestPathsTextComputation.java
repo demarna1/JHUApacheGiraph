@@ -53,7 +53,7 @@ public class SimpleShortestPathsTextComputation extends BasicComputation<
    * @return True if the source id
    */
   private boolean isSource(Vertex<Text, ?, ?> vertex) {
-    return vertex.getId().toString() == SOURCE_ID.get(getConf());
+    return vertex.getId().toString().equals(SOURCE_ID.get(getConf()));
   }
 
   @Override

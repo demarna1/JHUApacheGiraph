@@ -1,7 +1,7 @@
 -- Load the gene table and the raw article text
 genes = load 'hdfs://localhost:9000/project/Human_Gene_List.txt'
     using PigStorage('\t') as (id:int, gene:chararray);
-rawtext = load 'hdfs://localhost:9000/project/sample'
+rawtext = load 'hdfs://localhost:9000/project/rawtext'
     using PigStorage('\n', '-tagFile') as (filename:chararray, line:chararray);
 
 -- Parse raw text into words and their file source
